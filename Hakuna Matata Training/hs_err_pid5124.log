@@ -1,0 +1,177 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 67108864 bytes for Failed to commit area from 0x00000000c1c00000 to 0x00000000c5c00000 of length 67108864.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3221), pid=5124, tid=10012
+#
+# JRE version:  (10.0+46) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10+46, mixed mode, aot, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 arrList.TestRun
+
+Host: Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 17763 (10.0.17763.475)
+Time: Thu Jan 02 13:47:34 2020 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000019e5dd30000):  JavaThread "Unknown thread" [_thread_in_vm, id=10012, stack(0x00000046aa800000,0x00000046aa900000)]
+
+Stack: [0x00000046aa800000,0x00000046aa900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x59fbf9]
+V  [jvm.dll+0x6bca11]
+V  [jvm.dll+0x6bdc06]
+V  [jvm.dll+0x6be293]
+V  [jvm.dll+0x234ba8]
+V  [jvm.dll+0x59d4f4]
+V  [jvm.dll+0x592345]
+V  [jvm.dll+0x2f633b]
+V  [jvm.dll+0x2f62a5]
+V  [jvm.dll+0x2f6182]
+V  [jvm.dll+0x2f8376]
+V  [jvm.dll+0x3441f3]
+V  [jvm.dll+0x344906]
+V  [jvm.dll+0x3442f3]
+V  [jvm.dll+0x2c4758]
+V  [jvm.dll+0x2c58a1]
+V  [jvm.dll+0x69ce1b]
+V  [jvm.dll+0x69e63c]
+V  [jvm.dll+0x351909]
+V  [jvm.dll+0x685282]
+V  [jvm.dll+0x3ba143]
+V  [jvm.dll+0x3bc321]
+C  [javaw.exe+0x3541]
+C  [javaw.exe+0xe1cf]
+C  [javaw.exe+0xe376]
+C  [KERNEL32.DLL+0x17974]
+C  [ntdll.dll+0x6a271]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000019e5bb19740, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000019e5dd49000 GCTaskThread "GC Thread#0" [stack: 0x00000046aa900000,0x00000046aaa00000] [id=7624]
+  0x0000019e5dd4a800 GCTaskThread "GC Thread#1" [stack: 0x00000046aaa00000,0x00000046aab00000] [id=6756]
+  0x0000019e5dd4e000 GCTaskThread "GC Thread#2" [stack: 0x00000046aab00000,0x00000046aac00000] [id=10268]
+  0x0000019e5dd4f800 GCTaskThread "GC Thread#3" [stack: 0x00000046aac00000,0x00000046aad00000] [id=2892]
+  0x0000019e5dd88800 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000046aad00000,0x00000046aae00000] [id=1876]
+  0x0000019e5dd94000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000046aae00000,0x00000046aaf00000] [id=11700]
+
+[error occurred during error reporting (printing all threads), id 0xe0000002]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000019e5dd2dfe0] Heap_lock - owner thread: 0x0000019e5dd30000
+
+Heap address: 0x00000000c1c00000, size: 996 MB, Compressed Oops mode: Non-zero based: 0x00000000c1c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6e4b00000 - 0x00007ff6e4b3e000 	C:\Program Files\Java\jdk-10\bin\javaw.exe
+0x00007ffad7510000 - 0x00007ffad76fd000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffad6ef0000 - 0x00007ffad6fa3000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffad3690000 - 0x00007ffad3923000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffad4f70000 - 0x00007ffad5013000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffad5050000 - 0x00007ffad50ee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffad4dc0000 - 0x00007ffad4e5e000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffad53c0000 - 0x00007ffad54e2000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffad48f0000 - 0x00007ffad4a87000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffad3670000 - 0x00007ffad3690000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffad4f40000 - 0x00007ffad4f69000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffad4390000 - 0x00007ffad4529000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffad35d0000 - 0x00007ffad3670000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffad4530000 - 0x00007ffad462a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffac3530000 - 0x00007ffac37a9000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.914_none_05b346b2072102f2\COMCTL32.dll
+0x00007ffad4a90000 - 0x00007ffad4dbc000 	C:\WINDOWS\System32\combase.dll
+0x00007ffad4630000 - 0x00007ffad46ae000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffac9550000 - 0x00007ffac955a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffad5020000 - 0x00007ffad504e000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffabc360000 - 0x00007ffabc44f000 	C:\Program Files\Java\jdk-10\bin\msvcr120.dll
+0x00007ffac0bf0000 - 0x00007ffac0c96000 	C:\Program Files\Java\jdk-10\bin\msvcp120.dll
+0x00000000563b0000 - 0x0000000056e1f000 	C:\Program Files\Java\jdk-10\bin\server\jvm.dll
+0x00007ffad4e60000 - 0x00007ffad4e68000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffac0340000 - 0x00007ffac0349000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffad7030000 - 0x00007ffad709d000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffad0b40000 - 0x00007ffad0b64000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffad0b10000 - 0x00007ffad0b3d000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffad4340000 - 0x00007ffad438a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffad0bc0000 - 0x00007ffad0bcf000 	C:\Program Files\Java\jdk-10\bin\verify.dll
+0x00007ffad1e60000 - 0x00007ffad204d000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffabf5f0000 - 0x00007ffabf61a000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffac8e30000 - 0x00007ffac8e57000 	C:\Program Files\Java\jdk-10\bin\java.dll
+0x00007ffad0b80000 - 0x00007ffad0b96000 	C:\Program Files\Java\jdk-10\bin\zip.dll
+0x00007ffacf8d0000 - 0x00007ffacf8da000 	C:\Program Files\Java\jdk-10\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-10\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.914_none_05b346b2072102f2;C:\Program Files\Java\jdk-10\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: arrList.TestRun
+java_class_path (initial): C:\Users\arun\eclipse-workspace\Hakuna Matata Training\bin
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-10
+PATH=C:/Program Files/Java/jdk-10/bin/server;C:/Program Files/Java/jdk-10/bin;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk-10\bin;C:\Program Files\Java\jre-10\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft VS Code\bin;C:\Gradle\gradle-6.0.1\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\eclpise IDE\eclipse;
+USERNAME=arun
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17763 (10.0.17763.475)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 4078588k(906896k free), swap 10222588k(14248k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10+46) for windows-amd64 JRE (10+46), built on Mar  8 2018 02:11:18 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
